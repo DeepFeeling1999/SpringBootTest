@@ -1,0 +1,36 @@
+
+
+#激活dev配置
+spring:
+  profiles:
+    active: test
+
+---
+
+mysql:
+  name: root
+  password: dev
+spring:
+  config:
+    activate:
+      on-profile: dev
+---
+mysql:
+  name: root
+  password: test
+spring:
+  config:
+    activate:
+      on-profile: test
+---
+mysql:
+  name: root
+  password: prod
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+
+
+
